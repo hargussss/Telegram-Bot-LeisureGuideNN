@@ -486,6 +486,7 @@ def get_text_massages(message):
                                                "\n\n🥂 Zажигалка: прекрасное место с прекрасным персоналом! С более подробной информацией можете ознакомиться перейдя по [ссылке](https://russtriptease.com/nizhnii-novgorod/zazhigalka/).", reply_markup=markup, parse_mode='Markdown', disable_web_page_preview=True)
 
     elif message.text == "🥂 Советский":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         btn1 = types.KeyboardButton("🥂 Нижегородский")
         btn2 = types.KeyboardButton("🥂 Канавинский")
         btn3 = types.KeyboardButton("🔙 Главное меню")
@@ -493,6 +494,7 @@ def get_text_massages(message):
         bot.send_message(message.from_user.id, "🥂 В Советском районе, к сожалению, нет клубов, но Вы можете потусить в любом другом районе Нижнего Новгорода из предложенного ниже списка.", reply_markup=markup)
 
     elif message.text == "🥂 Приокский":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         btn1 = types.KeyboardButton("🥂 Нижегородский")
         btn2 = types.KeyboardButton("🥂 Канавинский")
         btn3 = types.KeyboardButton("🔙 Главное меню")
@@ -500,6 +502,7 @@ def get_text_massages(message):
         bot.send_message(message.from_user.id, "🥂 В Приокском районе, к сожалению, нет клубов, но Вы можете потусить в любом другом районе Нижнего Новгорода из предложенного ниже списка.", reply_markup=markup)
 
     elif message.text == "🥂 Сормовский":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         btn1 = types.KeyboardButton("🥂 Нижегородский")
         btn2 = types.KeyboardButton("🥂 Канавинский")
         btn3 = types.KeyboardButton("🔙 Главное меню")
@@ -507,6 +510,7 @@ def get_text_massages(message):
         bot.send_message(message.from_user.id, "🥂 В Сормовском районе, к сожалению, нет клубов, но Вы можете потусить в любом другом районе Нижнего Новгорода из предложенного ниже списка.",reply_markup=markup)
 
     elif message.text == "🥂 Московский":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         btn1 = types.KeyboardButton("🥂 Нижегородский")
         btn2 = types.KeyboardButton("🥂 Канавинский")
         btn3 = types.KeyboardButton("🔙 Главное меню")
@@ -521,6 +525,7 @@ def get_text_massages(message):
                                                "\n\n🥂 Plan_B: актуальное место для тех, кто ценит стиль и качество во всех направлениях. Днем заведение работает как ресторан, а ночью клубом, причем одним из лучших в Канавинском районе.", reply_markup=markup, parse_mode='Markdown', disable_web_page_preview=True)
 
     elif message.text == "🥂 Ленинский":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         btn1 = types.KeyboardButton("🥂 Нижегородский")
         btn2 = types.KeyboardButton("🥂 Канавинский")
         btn3 = types.KeyboardButton("🔙 Главное меню")
@@ -528,6 +533,7 @@ def get_text_massages(message):
         bot.send_message(message.from_user.id, "🥂 В Ленинском районе, к сожалению, нет клубов, но Вы можете потусить в любом другом районе Нижнего Новгорода из предложенного ниже списка.", reply_markup=markup)
 
     elif message.text == "🥂 Автозаводский":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         btn1 = types.KeyboardButton("🥂 Нижегородский")
         btn2 = types.KeyboardButton("🥂 Канавинский")
         btn3 = types.KeyboardButton("🔙 Главное меню")
