@@ -539,4 +539,611 @@ def get_text_massages(message):
         markup.add(btn1, btn2, btn3)
         bot.send_message(message.from_user.id, "🥂 В Автозаводском районе, к сожалению, нет клубов, но Вы можете потусить в любом другом районе Нижнего Новгорода из предложенного ниже списка.", reply_markup=markup)
 
+    # English language
+
+    elif message.text == "🇬🇧 English":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🍿 Cinema Parks")
+        btn2 = types.KeyboardButton("🎭 Theatres")
+        btn3 = types.KeyboardButton("🏛️ Museums")
+        btn4 = types.KeyboardButton("🌳 City parks")
+        btn5 = types.KeyboardButton("🍽️ Cafes")
+        btn6 = types.KeyboardButton("🥂 Clubs")
+        btn7 = types.KeyboardButton("🔙 Back to choosing of language")
+        markup.add(btn1, btn2, btn3, btn4, btn5, btn6, btn7)
+        bot.send_message(message.from_user.id, "👀 Select the section you are interested in", reply_markup=markup)
+
+    elif message.text == "🔙 Back to choosing of language":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🇷🇺 Русский")
+        btn2 = types.KeyboardButton("🇬🇧 English")
+        markup.add(btn1, btn2)
+        bot.send_message(message.from_user.id, "🇷🇺 Выберите язык / 🇬🇧 Choose your language", reply_markup=markup)
+
+    elif message.text == "🍿 Cinema Parks":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🍿 Nijegorodsky district")
+        btn2 = types.KeyboardButton("🍿 Sovetsky district")
+        btn3 = types.KeyboardButton("🍿 Prioksky district")
+        btn4 = types.KeyboardButton("🍿 Sormovsky district")
+        btn5 = types.KeyboardButton("🍿 Moskovsky district")
+        btn6 = types.KeyboardButton("🍿 Kanavinsky district")
+        btn7 = types.KeyboardButton("🍿 Leninsky district")
+        btn8 = types.KeyboardButton("🍿 Autozavodsky district")
+        btn9 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9)
+        bot.send_message(message.from_user.id, "⬇ Choose the area of Nizhny Novgorod where you live",
+                         reply_markup=markup)
+
+    elif message.text == "🍿 Nijegorodsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn221 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn221)
+        bot.send_message(message.from_user.id,
+                         "In the Nijegorodsky district, we recommend the following cinemas:\n\n🎬 Cinema Park in the Fantastika shopping mall: Cinema Park cinema in the Fantastika shopping and entertainment complex offers visitors 8 comfortable halls with a large number of seats. "
+                        "Viewers will discover a huge selection of new movies, and new sessions start here every 15 minutes. Five halls out of eight are equipped with modern equipment for showing films in RealD 3D format, which has gained popularity among viewers of all ages. "
+                         "For those who prefer to watch movies in a more private setting, there is a Relax hall designed for 34 spectators. You can get acquainted with the sessions held at [link](https://clck.ru/QgHkQ)."
+                         "\n\n🎬 Empire of Dreams in the Sky shopping mall: a modern 8-hall multiplex Empire of Dreams in the Sky shopping mall on Lyadova Square, which includes 7 halls equipped with an ultra-modern 3D Master image system and a JBL speaker system. ATMOS Hall is equipped with innovative Dolby Atmos technology, which, according to experts, is becoming a new milestone in the development of cinemas. You can get acquainted with the sessions held at [link](https://clck.ru/36BNwo).", reply_markup=markup, parse_mode='Markdown', disable_web_page_preview=True)
+
+    elif message.text == "🍿 Sovetsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn331 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn331)
+        bot.send_message(message.from_user.id,
+                         "🎬 There are not so many good cinemas in the Sovetsky district, we advise you to visit Harlekino in the Zhar-Ptitsa shopping center: this is the first family cinema in Nizhny Novgorod. Seven cozy cinema halls, the latest cinema projection and sound equipment, "
+                        "an active 3D image system, a convenient distance between the rows in the halls and upholstered chairs with lifting armrests with drink stands and always fragrant freshly prepared popcorn in the cinema bar – everything for a comfortable stay in this cinema. "
+                        "You can get acquainted with the sessions held at [link](https://clck.ru/36BQ9K).", reply_markup=markup, parse_mode='Markdown', disable_web_page_preview=True)
+
+    elif message.text == "🍿 Prioksky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn441 = types.KeyboardButton("🍿 Nijegorodsky district")
+        btn442 = types.KeyboardButton("🍿 Sovetsky district")
+        btn443 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn441, btn442, btn443)
+        bot.send_message(message.from_user.id, "🎬 Unfortunately, there are no cinemas in the Prioksky district. We recommend visiting cinemas in the nearby districts of Nizhny Novogod — Nijegorodsky and Sovetsky.", reply_markup=markup)
+
+    elif message.text == "🍿 Sormovsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn551 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn551)
+        bot.send_message(message.from_user.id,
+                         "🎬 In the Sormovsky district, we can recommend the Empire of Dreams cinema in the Golden Mile shopping mall: modern 5-room cinema. 5 cinemas with 798 seats are open for visitors to watch movies in 2D and 3D format, "
+                         "for a pleasant wait there is a comfortable and spacious lobby, as well as children's slot machines., You can get acquainted with the sessions held at [link](https://clck.ru/36BQvh).", reply_markup=markup, parse_mode='Markdown', disable_web_page_preview=True)
+
+    elif message.text == "🍿 Moskovsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn661 = types.KeyboardButton("🍿 Kanavinsky district")
+        btn662 = types.KeyboardButton("🍿 Sormovsky district")
+        btn663 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn661, btn662, btn663)
+        bot.send_message(message.from_user.id,
+                         "🎬 Unfortunately, there are no cinemas in the Moskovsky district. We recommend visiting cinemas in the nearby districts of Nizhny Novogod — Sormovsky and Kanavinsky.", reply_markup=markup)
+
+    elif message.text == "🍿 Kanavinsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn771 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn771)
+        bot.send_message(message.from_user.id,
+                         "In the Nizhny Novgorod region, we recommend the following cinemas:\n\n🎬 Cinema Park in the Seventh Heaven shopping center: the cinema offers visitors 10 comfortable halls with a large number of seats.  "
+                         "Multiplex Cinema Park combines all the currently relevant global film screening trends, including the IMAX and 4DX ™ Super Hall. In addition to the IMAX cinema hall, seven more cinemas are equipped with digital equipment for showing films in 3D format. "
+                         "There are special high-comfort halls for watching the film in an informal setting. The RELAX lounge gives you the opportunity to enjoy watching movies in comfortable leather armchairs, relax in the premium bar. "
+                         "The JOLLY hall is distinguished by an unusual design, cozy two- and four-seater sofas, as well as soft transformer chairs. The atmosphere of home warmth and comfort is suitable both for a large group of friends and for an unforgettable romantic evening of a couple in love. "
+                         "You can get acquainted with the sessions held at [link](https://clck.ru/36BRX6 ).\n\n🎬 Cinema in the Rio shopping center: The five-hall multiplex CINEMA meets the highest international standards of film screening. The digital quality of the Dolby Digital Surround EX format allows you to enjoy the most subtle shades of sound when watching a movie. You can get acquainted with the sessions held at [link](https://clck.ru/36BRd5).", reply_markup=markup, parse_mode='Markdown', disable_web_page_preview=True)
+
+    elif message.text == "🍿 Leninsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn881 = types.KeyboardButton("🍿 Autozavodsky district")
+        btn882 = types.KeyboardButton("🍿 Kanavinsky district")
+        btn883 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn881, btn882, btn883)
+        bot.send_message(message.from_user.id,"🎬 Unfortunately, there are no cinemas in Leninsky district. We recommend visiting cinemas in the nearby districts of Nizhny Novogod — Avtozavodsky and Kanavinsky.", reply_markup=markup)
+
+    elif message.text == "🍿 Autozavodsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn991 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn991)
+        bot.send_message(message.from_user.id,
+                         "🎬 In the Avtozavodsky district, we can advise the cinema Imeria of Dreams Mir: the cinema is located in a building that is an architectural monument. All internal elements of historical value have been completely restored.  "
+                         "The cinema has a cozy cafe, sushi bar, billiards and karaoke club. There are slot machines in the lobby of the first floor. Convenient transport interchange allows you to quickly get to the cinema by any type of transport. "
+                         "Christie cinema projectors are installed in the Mir cinema to show digital 2D and 3D films. You can get acquainted with the sessions held at [link](https://clck.ru/36BSPa).", reply_markup=markup, parse_mode='Markdown', disable_web_page_preview=True)
+
+    elif message.text == "🔙 The main menu":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🍿 Cinema Parks")
+        btn2 = types.KeyboardButton("🎭 Theatres")
+        btn3 = types.KeyboardButton("🏛️ Museums")
+        btn4 = types.KeyboardButton("🌳 City parks")
+        btn5 = types.KeyboardButton("🍽️ Cafes")
+        btn6 = types.KeyboardButton("🥂 Clubs")
+        btn7 = types.KeyboardButton("🔙 Back to choosing of language ")
+        markup.add(btn1, btn2, btn3, btn4, btn5, btn6, btn7)
+        bot.send_message(message.from_user.id, "👀 Select the section you are interested in", reply_markup=markup)
+
+
+    elif message.text == "🎭 Theatres":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn111 = types.KeyboardButton("🎭 Nijegorodsky district")
+        btn112 = types.KeyboardButton("🎭 Sovetsky district")
+        btn113 = types.KeyboardButton("🎭 Prioksky district")
+        btn114 = types.KeyboardButton("🎭 Sormovsky district")
+        btn115 = types.KeyboardButton("🎭 Moskovsky district")
+        btn116 = types.KeyboardButton("🎭 Kanavinsky district")
+        btn117 = types.KeyboardButton("🎭 Leninsky district")
+        btn118 = types.KeyboardButton("🎭 Autozavodsky district")
+        btn9 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn111, btn112, btn113, btn114, btn115, btn116, btn117, btn118, btn9)
+        bot.send_message(message.from_user.id, "⬇ Choose the district of Nizhny Novgorod where you live", reply_markup=markup)
+
+    elif message.text == "🎭 Nijegorodsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "Most of the theaters of the city are located in the historical part of the city — in the Nizhny Novgorod district, here we recommend visiting the following theaters:\n\n 🎭 Nizhny Novgorod State Academic Drama Theater named after M. Gorky: the oldest theater in Nizhny Novgorod, whose history began more than 200 years ago. "
+                         "Today, the theater has received worldwide recognition, and the classical repertoire is constantly being updated with bright premieres of modern works. You can get acquainted with the poster at [link](https://clck.ru/LGizT )."
+                         "\n\n 🎭 Nizhny Novgorod Actor's House named after V.V. Vikhrov: a creative platform where performances, master classes and theatrical experiments are held. An acting studio has recently opened here. "
+                         "You can get acquainted with the poster at [link](https://clck.ru/36BTDS ).\n\n 🎭 Nizhny Novgorod State Academic Opera and Ballet Theater named after A.S. Pushkin: the oldest theater in Nizhny Novgorod was founded in 1931. "
+                         "The repertoire is based on classical works, and not only the most popular performances, but also those that have begun to be forgotten. The level of professionalism of directors and actors does not leave any viewer indifferent, "
+                         "therefore, the theater is considered one of the best in Nizhny Novgorod. You can get acquainted with the poster at [link](https://clck.ru/34YHLu ).\n\n 🎭 Nizhny Novgorod State Academic Puppet Theater: Nizhny Novgorod Puppet Theater is the best place for a children's holiday. "
+                         "Located in a historic building from 1912. Over the rich history of the theater, more than 320 performances have been staged, and the repertoire is constantly being updated. You can get acquainted with the poster at [link](https://clck.ru/36BTUC )."
+                         "\n\n 🎭 Theater of the young spectator: created at the beginning of the XX century, the theater focuses on staging performances for children, but there are modern productions for adults in the repertoire. TYUZ was founded in 1928 by a famous actor "
+                         "and directed by N. Sobolshchikov-Samarin, has a convenient location in the city center. You can get acquainted with the poster at [link](https://clck.ru/36BTZn ).\n\n 🎭 Nizhny Novgorod Comedy Theater: the theater was founded in the post-war period as a mini-theater Sniper, "
+                         "but over time it became the leading theater stage with productions in the comedy genre. The theater employs talented directors, winners of numerous awards. They love Comedy for the variety of repertoire and stunning interior. "
+                         "The repertoire of the theater is multifaceted and includes folk comedies, musical comics, tragi-farces, phantasmagoria and comedy-parables. The performances take place on several stages.You can get acquainted with the poster at [link](https://clck.ru/36BTjs).",
+                         reply_markup=markup, parse_mode='Markdown', disable_web_page_preview=True)
+
+    elif message.text == "🎭 Sovetsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🎭 Nijegorodsky district")
+        btn2 = types.KeyboardButton("🎭 Sormovsky district")
+        btn3 = types.KeyboardButton("🎭 Kanavinsky district")
+        btn4 = types.KeyboardButton("🎭 Leninsky district")
+        btn5 = types.KeyboardButton("🎭 Autozavodsky district")
+        btn6 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1, btn2, btn3, btn4, btn5, btn6)
+        bot.send_message(message.from_user.id,
+                         "🎭 There are no theaters in the Sovetsky district. But you can always visit the theater in the nearby Nizhny Novgorod district or in any other part of the city, we are sure that you will definitely you find something suitable for yourself there😉",
+                         reply_markup=markup)
+
+    elif message.text == "🎭 Prioksky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🎭 Nijegorodsky district")
+        btn2 = types.KeyboardButton("🎭 Sormovsky district")
+        btn3 = types.KeyboardButton("🎭 Kanavinsky district")
+        btn4 = types.KeyboardButton("🎭 Leninsky district")
+        btn5 = types.KeyboardButton("🎭 Autozavodsky district")
+        btn6 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1, btn2, btn3, btn4, btn5, btn6)
+        bot.send_message(message.from_user.id,
+                         "🎭 There are no theaters in the Prioksky district. But you can always visit the theater in the nearby Nizhny Novgorod district or in any other part of the city, we are sure that you will definitely find something suitable for yourself😉",
+                         reply_markup=markup)
+
+    elif message.text == "🎭 Sormovsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "🎭 In the Sormovsky district, we can recommend the Nizhny Novgorod Chamber Music Theater named after V. Stepanov: the creator of the musical theater is Vladimir Stepanov, formerly a leading soloist of opera and ballet in Russia and abroad. "
+                         "The repertoire of the theater is classical ballets and musicals. You can get acquainted with the poster at [link](https://clck.ru/36BUND).",
+                         reply_markup=markup, parse_mode='Markdown', disable_web_page_preview=True)
+
+    elif message.text == "🎭 Moskovsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🎭 Nijegorodsky district")
+        btn2 = types.KeyboardButton("🎭 Sormovsky district")
+        btn3 = types.KeyboardButton("🎭 Kanavinsky district")
+        btn4 = types.KeyboardButton("🎭 Leninsky district")
+        btn5 = types.KeyboardButton("🎭 Autozavodsky district")
+        btn6 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1, btn2, btn3, btn4, btn5, btn6)
+        bot.send_message(message.from_user.id,
+                         "🎭 There are no theaters in the Moscow district. But you can always visit the theater in the nearby areas — Sormovsky and Kanavinsky or in any other part of the city.",
+                         reply_markup=markup)
+
+    elif message.text == "🎭 Kanavinsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "In the Kanavinsky district , we can recommend the following theaters to visit:\n\n 🎭 Theater of the new generation Through the Looking Glass: a unique theater in which adult artists and children play. In the repertoire of the theater there are performances both "
+                         " for the youngest viewers (from 2 years old) and schoolchildren, and serious productions for adults. You can get acquainted with the poster at [link](http://clck.ru/b78cq ).\n\n 🎭 Vera Theater: the theater offers a diverse repertoire "
+                         "for young viewers. Originated from an ordinary studio under the direction of Vera Gorshkova in 1976, the theater is currently mobile, puts on performances throughout the Nizhny Novgorod. You can get acquainted with the poster at [link](https://clck.ru/36BV5v).",
+                         reply_markup=markup, parse_mode='Markdown', disable_web_page_preview=True)
+
+    elif message.text == "🎭 Leninsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "🎭 In the Leninsky district, we can advise you to visit the Theater of musical and plastic drama Transfiguration: the theater appeared at the end of the XX century and is engaged in the professional development of the musical and plastic genre. The repertoire includes phantasmagoria, dramas, comedies, original performances, children's classics and concerts. "
+                         "You can get acquainted with the poster at [link](https://clck.ru/36BVHS).", reply_markup=markup,
+                         parse_mode='Markdown', disable_web_page_preview=True)
+
+    elif message.text == "🎭 Autozavodsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "🎭 In the Avtozavodsky district, we can advise you to visit the Nizhny Novgorod Independent Theater on Happy Street: everything you need for your leisure is prepared here, and it is also possible to get useful skills here. Nizhny Novgorod Independent Theater on Happy Street will assist you in achieving your goals. "
+                         "You can get acquainted with the poster at [link](https://clck.ru/36BVXg).", reply_markup=markup,
+                         parse_mode='Markdown', disable_web_page_preview=True)
+
+    elif message.text == "🏛️ Museums":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn11 = types.KeyboardButton("🏛️ Nijegorodsky district")
+        btn12 = types.KeyboardButton("🏛️ Sovetsky district")
+        btn13 = types.KeyboardButton("🏛️ Prioksky district")
+        btn14 = types.KeyboardButton("🏛️ Sormovsky district")
+        btn15 = types.KeyboardButton("🏛️ Moskovsky district")
+        btn16 = types.KeyboardButton("🏛️ Kanavinsky district")
+        btn17 = types.KeyboardButton("🏛️ Leninsky district")
+        btn18 = types.KeyboardButton("🏛️ Autozavodsky district")
+        btn9 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn11, btn12, btn13, btn14, btn15, btn16, btn17, btn18, btn9)
+        bot.send_message(message.from_user.id, "⬇ Choose the district of Nizhny Novgorod where you live",
+                         reply_markup=markup)
+
+    elif message.text == "🏛️ Nijegorodsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "In the Nijegorodsky district, we can offer you to go to the following museums:\n\n🏛️ Nizhny Novgorod State Art Museum: here you will see historical paintings and you can also visit the VR helmet and view the paintings up close and you can visit their website by clicking on [link](https://artmuseumnn.ru/)."
+                         "\n\n🏛️ Museum-branch of the Nizhny Novgorod Kremlin: here you can look at a lot of equipment of our vast country, and you can also look at the great walls of the Nizhny Novgorod Kremlin, which conceals a centuries-old history within its walls. You can read more by clicking on [link](https://ngiamz.ru/nizhegorodskiy-kreml)."
+                         "\n\n🏛️ Technical Museum: here you can see the inventions of the past centuries, which are no longer used in everyday life. More detailed information can be found by clicking on [link](https://ngiamz.ru/tekhnicheskiy-muzey)."
+                         "\n\n🏛️ Museum of Living Paper: here you can see many different figures created only with ordinary paper. You can get a closer look at the works by clicking on [link](https://vk.com/muzeyzhivoybumagi)."
+                         "\n\n🏛️ Toy Museum: here you can see a lot of toys of the last century and visually compare what toys children had before, rather than what they have now. More detailed information can be found by clicking on [link](https://ngiamz.ru/igrushechnyy-muzey)."
+                         "\n\n🏛️ Museum of Technology and Defense Industry: here you can see and touch the wonky equipment of our great power! More detailed information can be found by clicking on [link](https://park-pobeda-nn.ru/).",
+                         reply_markup=markup, parse_mode='Markdown', disable_web_page_preview=True)
+
+    elif message.text == "🏛️ Sovetsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "🏛️ In the Sovetsky district, we can offer you to go to the Zoological Museum: here you can see many models of various animals and immerse yourself in the world of animals. More detailed information can be found by clicking on [link](https://museum.unn.ru/).",
+                         reply_markup=markup, parse_mode='Markdown', disable_web_page_preview=True)
+
+    elif message.text == "🏛️ Prioksky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "🏛️ In the Prioksky district, we can offer you to go to the A.D. Sakharov Museum: here you can get acquainted with the life of a Soviet theoretical physicist, academician of the USSR Academy of Sciences, public figure, dissident and human rights activist. More detailed information can be found by clicking on [link](https://vk.com/sakharovmuseum).",
+                         reply_markup=markup, parse_mode='Markdown', disable_web_page_preview=True)
+
+    elif message.text == "🏛️ Sormovsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "🏛️ In Sormovsky district we can offer you to visit the museum Back to the USSR: here you can experience the atmosphere of the USSR. More detailed information can be found by clicking on [link](https://ссср-музей.com/).",
+                         reply_markup=markup, parse_mode='Markdown', disable_web_page_preview=True)
+
+
+    elif message.text == "🏛️ Moskovsky district":
+
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🏛️ Nijegorodsky district")
+        btn2 = types.KeyboardButton("🏛️ Sovetsky district")
+        btn3 = types.KeyboardButton("🏛️ Kanavinsky district")
+        btn4 = types.KeyboardButton("🏛️ Leninsky district")
+        btn5 = types.KeyboardButton("🏛️ Autozavodsky district")
+        btn6 = types.KeyboardButton("🏛️ Sormovsky district")
+        btn7 = types.KeyboardButton("🏛️ Prioksky district")
+        btn8 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8)
+        bot.send_message(message.from_user.id,
+                         "🏛️ Unfortunately, there are no museums in the Moskovsky district, but you can visit a museum in any other district of Nizhny Novgorod.",
+                         reply_markup=markup)
+
+    elif message.text == "🏛️ Kanavinsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "🏛️ In the Kanavinsky district, we can offer you to go to Quarks: here you can get to know science and its interesting facts better. More detailed information can be found by clicking on [link](https://kvarky.ru/).",
+                         reply_markup=markup, parse_mode='Markdown', disable_web_page_preview=True)
+
+    elif message.text == "🏛️ Leninsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "🏛️ In the Leninsky district, we can offer you to go to the Museum of the History of the MPVO-GO-RSChS: here you can look at old and also still used firearms. More detailed information can be found by clicking on [link](https://вдпо.рф/museum/169).",
+                         reply_markup=markup, parse_mode='Markdown', disable_web_page_preview=True)
+
+    elif message.text == "🏛️ Autozavodsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "In Avtozavodsky district we can offer you to go to the following museum:\n\n🏛️ GAZ History Museum: here you can look at the old, but quite famous machines created earlier by our civil engineers who put their soul into creating these legendary machines. More detailed information can be found by clicking on [link](http://museum.vaz.ru/)."
+                         "\n\n🏛️ Nizhny Novgorod Metro Museum: here you can find out how the GREAT Metro of Nizhny Novgorod was built and is being built. More detailed information can be found by clicking on [link](http://metronn.ru/museum/).", reply_markup=markup, parse_mode='Markdown', disable_web_page_preview=True)
+
+    elif message.text == "🌳 City parks":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn21 = types.KeyboardButton("🌳 Nijegorodsky district")
+        btn22 = types.KeyboardButton("🌳 Sovetsky district")
+        btn23 = types.KeyboardButton("🌳 Prioksky district")
+        btn24 = types.KeyboardButton("🌳 Sormovsky district")
+        btn25 = types.KeyboardButton("🌳 Moskovsky district")
+        btn26 = types.KeyboardButton("🌳 Kanavinsky district")
+        btn27 = types.KeyboardButton("🌳 Leninsky district")
+        btn28 = types.KeyboardButton("🌳 Autozavodsky district")
+        btn9 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn21, btn22, btn23, btn24, btn25, btn26, btn27, btn28, btn9)
+        bot.send_message(message.from_user.id, "⬇ Choose the district of Nizhny Novgorod where you live",
+                         reply_markup=markup)
+
+    elif message.text == "🌳 Nijegorodsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "🌳 In the Nizhny Novgorod district, we can advise you to take a walk in the Alexander Garden Park, where you can also walk along the well-known Chkalov Stairs and, of course, see the monument named after V.P. Chkalov. The park is located next to the Volga River, so you can admire the beautiful view."
+                         "\n\n🌳 The park of the 800th anniversary of Nizhny Novgorod, a place suitable for walking with children, in company, couples in love and just alone. Insanely beautiful place, we advise you to visit it at sunset. There are playgrounds for children, sports grounds for adults and quiet places where you can retire and enjoy the beauty of the city.",
+                         reply_markup=markup)
+
+    elif message.text == "🌳 Sovetsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "🌳 In the Sovetsky district, we recommend visiting the Shchelokovsky farm. This is a great place for walks and picnics. There are dirt bike paths that turn into a ski track in winter. There are 3 lakes in the park where you can watch ducks and even feed them, which children really like. Of the minuses, only the lack of Parking for personal transport.",
+                         reply_markup=markup)
+
+    elif message.text == "🌳 Prioksky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "🌳 In the Prioksky district, we can advise you to visit the Switzerland Park. A very pleasant park, you can feel yourself in the forest, there are various types of entertainment for children of any age, there is a special obstacle course for older children. Magnificent view of the Oka River from the slope. If you get hungry, there are cafes with ice cream and coffee, as well as large ones like Khachapuri or Samurai. Of the minuses, only parking is available, there are definitely fewer places for cars than those who want to park next to the park.",
+                         reply_markup=markup)
+
+    elif message.text == "🌳 Sormovsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "🌳 In Sormovsky district, we recommend visiting Sormovsky Park: a great place to spend time with family or friends. The park is located in the green zone of the city, which creates an atmosphere for rest and relaxation. There are several playgrounds for children. There is also a pond with birds and a zoo in the park, you can see many different species of birds and animals. And if you want a little extreme, there are attractions in Sormovsky Park that people who want to have a little fun will really like.",
+                         reply_markup=markup)
+
+    elif message.text == "🌳 Moskovsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "🌳 In the Moscow district, we can advise Burnakovsky Square. A small park where you can just walk, sit and admire the flowers. Pleasant for walking in the evening alone or in company.",
+                         reply_markup=markup)
+
+    elif message.text == "🌳 Kanavinsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "🌳 In the Kanavinsky district, we recommend visiting the Park of Culture and Recreation named after May 1 — an excellent park for spending time with family or friends. Here you will find entertainment for every taste, you can ride the rides, you can visit the living area and watch and feed the animals, you can feed the ducks on the pond. There is a Tarzania park in the park, you can climb and play for several hours, there is a cool playground opposite the park, modern and children have something to do there.",
+                         reply_markup=markup)
+
+    elif message.text == "🌳 Leninsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "🌳 In the Leninsky district, we can recommend the Dubki Park. A very cozy and lively park, a great place to walk in the evening. The park differs from others by its sincere nature, especially in autumn. There are playgrounds and a separate fenced area for sports activities, events are held here on holidays."                        
+                         "\n\n🌳 Mayakovsky Park is a very good park to visit with children. There is a basketball and volleyball court, there is a variety ground where various events are often held. A nice place to walk around, taking a cup of coffee."
+                         "\n\n🌳 Technotkan Square is a well-maintained square where you can relax with children, since on weekdays events for children are often held here. A place that will leave behind a good impression.",
+                         reply_markup=markup)
+
+    elif message.text == "🌳 Autozavodsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "🌳 In Avtozavodsky district we can advise the Park named after the 777th anniversary of Nizhny Novgorod, a pretty good place to just walk with young children, but there are also entertainment for older children: shooting range, trampolines and others. The park is located on the shore of a pond with ducks and seagulls. You can walk along the shore."
+                         "\n\n🌳 Kultbaza Park is a great place for walking. After the reconstruction, it has become much better here and you can walk with pleasure. For sports lovers there is a tennis court."
+                         "\n\n🌳 Glory Park is a quiet and peaceful place for those who like to sit in their pleasure. In the center of the park there is a hill with a mosaic stele, inside of which the eternal flame burns. There is a memorial to the Afghan soldiers nearby. If you go a little further, you can find benches and playgrounds for extreme skating and BMX."
+                         "\n\n🌳 Avtozavodsky Park is a large-scale park, great for family walks, there are attractions for small children, good sports areas for older children with a good fenced football field and ramps for roller skating, scooters, bicycles and skateboards. There is a lake nearby where you can feed ducks, take a sports run or just walk. The very place where you can relax your soul, enjoy communication and nature.",
+                         reply_markup=markup)
+
+    elif message.text == "🍽️ Cafes":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn41 = types.KeyboardButton("🍽️ Nijegorodsky district")
+        btn42 = types.KeyboardButton("🍽️ Sovetsky district")
+        btn43 = types.KeyboardButton("🍽️ Prioksky district")
+        btn44 = types.KeyboardButton("🍽️ Sormovsky district")
+        btn45 = types.KeyboardButton("🍽️ Moskovsky district")
+        btn46 = types.KeyboardButton("🍽️ Kanavinsky district")
+        btn47 = types.KeyboardButton("🍽️ Leninsky district")
+        btn48 = types.KeyboardButton("🍽️ Autozavodsky district")
+        btn9 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn41, btn42, btn43, btn44, btn45, btn46, btn47, btn48, btn9)
+        bot.send_message(message.from_user.id, "⬇ Choose the district of Nizhny Novgorod where you live",
+                         reply_markup=markup)
+
+    elif message.text == "🍽️ Nijegorodsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "🍽️ In the Nizhny Novgorod region, we recommend visiting the restaurant Jani restaurant, a very nice and atmospheric place. They cook very tasty and the serving of dishes is quite interesting, for example, when ordering borscht, it is brought in a pot. You should definitely try the big khachapuri. There is a children's menu. Cooks and waiters work perfectly. The surroundings are made in the style of a Georgian courtyard — very cozy."
+                         "\n\n🍽️ The Red Wall Restaurant is a great place to eat delicious food. A special feature of this place is the view from the veranda of the river and the Kremlin. The average check is higher than in many other places, but it's worth it."
+                         "\n\n🍽️ Cafe Bezukhov is a cozy cafe to sit with friends, enjoy homemade food and not only."
+                         "\n\n🍽️ Pyatkin Restaurant is a wonderful restaurant with very tasty Russian cuisine and an atmospheric interior."
+                         "\n\n🍽️ For lovers of quick snacks in the Nizhny Novgorod district there are KFC, BURGER KING and Delicious — and that's it.",
+                         reply_markup=markup)
+
+    elif message.text == "🍽️ Sovetsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "🍽️ In the Sovetsky district, we recommend visiting the Nostalgia restaurant — a very atmospheric place, an exquisite menu, delicious and beautiful."
+                         "\n\n🍽️ The restaurant Le Grill is a chic place, a seemingly inconspicuous restaurant, but inside it is very cozy and stylish. Delicious food, especially steaks.",
+                         reply_markup=markup)
+
+    elif message.text == "🍽️ Prioksky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "🍽️ In the Prioksky district, we can advise you to visit the Khachapuria restaurant, which is located in the Switzerland Park. After a walk in the park, a very good place to taste khinkali and khachapuri."
+                         "\n\n🍽️ Cafe Dark Side is an ideal place to eat delicious and not very expensive. The cafe is made in the style of the movie Star Wars, so fans will appreciate it."
+                         "\n\n🍽️ Cafe Samurai — sushi bar. A great place for fans of rolls."
+                         "\n\n🍽️ Cafe Golden Ring is a good place with a beautiful view from the veranda. Delicious food, a huge hall, polite staff."
+                         "\n\n🍽️ Cafe Prince is a great place with a pleasant atmosphere and reasonable prices.",
+                         reply_markup=markup)
+
+    elif message.text == "🍽️ Sormovsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "🍽️ In the Sormovsky district, we can recommend the restaurant Currant. An atmospheric place, an interesting interior, pleasant background music and delicious food."
+                         "\n\n🍽️ Cafe Dark Side is an ideal place to eat delicious and not very expensive. The cafe is made in the style of the movie Star Wars, so fans will appreciate it."
+                         "\n\n🍽️ Pizzeria Pizza World for pizza lovers. Delicious pizzas and a good atmosphere."
+                         "\n\n🍽️ Cafe Samurai — sushi bar. A great place for fans of rolls."
+                         "\n\n🍽️ For lovers of quick snacks in the Sormovsky district there are KFC, BURGER KING and Delicious — and that's it.",
+                         reply_markup=markup)
+
+    elif message.text == "🍽️ Moskovsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "🍽️ In the Moskovsky district, we recommend visiting the Salvadori Dali restaurant - a pleasant place, delicious cuisine, cozy atmosphere."
+                         "\n\n🍽️ Cafe Mexico for lovers of Mexican cuisine, reasonable prices and good service.",
+                         reply_markup=markup)
+
+    elif message.text == "🍽️ Kanavinsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "🍽️ In the Kanavinsky district, we recommend visiting the Plan_B restaurant — a restaurant with a large hall. Exquisite cuisine, stylish interior, pleasant and cozy atmosphere. It is noteworthy that at night Reston works as a nightclub, with excellent music, good face control and a bar."
+                         "\n\n🍽️ The restaurant Aunt Mariko's Khachapuri is a great place to meet friends. Good cuisine, wonderful atmosphere and friendly staff."
+                         "\n\n🍽️ Cafe Samovarnaya is a chic place, a combination of price and quality. Top-class dishes, top-level service."
+                         "\n\n🍽️ Cafe Dark Side is an ideal place to eat delicious and not very expensive. The cafe is made in the style of the movie Star Wars, so fans will appreciate it."
+                         "\n\n🍽️ For lovers of quick snacks in the Kanavinsky district there are KFC, BURGER KING and Delicious — and that's it.",
+                         reply_markup=markup)
+
+    elif message.text == "🍽️ Leninsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "🍽️ In the Leninsky district, we recommend visiting the cafe Samovar — a nice cozy place to eat a hearty meal."
+                         "\n\n🍽️ Khachapuria Restaurant is a very good place to taste khinkali or khachapuri."
+                         "\n\n🍽️ Mimino Cafe is a cozy place for snacks. Maximum domesticated cafe, friendly staff and delicious cuisine."
+                         "\n\n🍽️ Cafe Shawarma in Turkish is a great place to eat delicious doners and feel all the flavor and authenticity of Turkish cuisine."
+                         "\n\n🍽️ Cafe Dark Side is an ideal place to eat delicious and not very expensive. The cafe is made in the style of the movie Star Wars, so fans will appreciate it."
+                         "\n\n🍽️ For lovers of quick snacks in the Leninsky district there are KFC, BURGER KING and Delicious — and that's it.",
+                         reply_markup=markup)
+
+    elif message.text == "🍽️ Autozavodsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "🍽️ In Avtozavodsky district, we recommend visiting the restaurant Home Italy — a very cozy restaurant with delicious food. Wonderful cappuccino with tiramisu and raspberry-chocolate cake."
+                         "\n\n🍽️ Cafe Chito Gwrito is a great place to have a hearty meal. Price-quality ratio."
+                         "\n\n🍽️ Cafe Kebab House is for lovers of a good meal. Clean room and very kind staff, and the dishes are at the highest level."
+                         "\n\n🍽️ Cafe Dark Side is an ideal place to eat delicious and not very expensive. The cafe is made in the style of the movie Star Wars, so fans will appreciate it."
+                         "\n\n🍽️ For lovers of quick snacks in the Avtozavodsky district there are KFC, BURGER KING and Delicious — and that's it.",
+                         reply_markup=markup)
+
+    elif message.text == "🥂 Clubs":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn61 = types.KeyboardButton("🥂 Nijegorodsky district")
+        btn62 = types.KeyboardButton("🥂 Sovetsky district")
+        btn63 = types.KeyboardButton("🥂 Prioksky district")
+        btn64 = types.KeyboardButton("🥂 Sormovsky district")
+        btn65 = types.KeyboardButton("🥂 Moskovsky district")
+        btn66 = types.KeyboardButton("🥂 Kanavinsky district")
+        btn67 = types.KeyboardButton("🥂 Leninsky district")
+        btn68 = types.KeyboardButton("🥂 Autozavodsky district")
+        btn9 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn61, btn62, btn63, btn64, btn65, btn66, btn67, btn68, btn9)
+        bot.send_message(message.from_user.id, "⬇ Choose the district of Nizhny Novgorod where you live",
+                         reply_markup=markup)
+
+    elif message.text == "🥂 Nijegorodsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "In the Nizhny Novgorod district you can visit the following clubs:\n\n🥂 Cleavage: a club with excellent staff and a pleasant atmosphere, here you will definitely have a good time. More detailed information can be found by clicking on [link](https://бар-декольте.рф/)."
+                         "\n\n🥂 Burlesque: a club with excellent staff and a pleasant atmosphere. More detailed information can be found by clicking on [link](http://bur-52.ru/)."
+                         "\n\n🥂 PM-bar: here you will have a great time with your company. More detailed information can be found by clicking on [link](https://pivomanbar.ru/)."
+                         "\n\n🥂 Zажигалка: a wonderful place with wonderful staff! More detailed information can be found by clicking on [link](https://russtriptease.com/nizhnii-novgorod/zazhigalka/).",
+                         reply_markup=markup, parse_mode='Markdown', disable_web_page_preview=True)
+
+    elif message.text == "🥂 Sovetsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🥂 Nijegorodsky district")
+        btn2 = types.KeyboardButton("🥂 Kanavinsky district")
+        btn3 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1, btn2, btn3)
+        bot.send_message(message.from_user.id,
+                         "🥂 Unfortunately, there are no clubs in the Sovetsky district, but you can hang out in any other district of Nizhny Novgorod from the list below.",
+                         reply_markup=markup)
+
+    elif message.text == "🥂 Prioksky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🥂 Nijegorodsky district")
+        btn2 = types.KeyboardButton("🥂 Kanavinsky district")
+        btn3 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1, btn2, btn3)
+        bot.send_message(message.from_user.id,
+                         "🥂 Unfortunately, there are no clubs in the Prioksky district, but you can hang out in any other district of Nizhny Novgorod from the list below.",
+                         reply_markup=markup)
+
+    elif message.text == "🥂 Sormovsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🥂 Nijegorodsky district")
+        btn2 = types.KeyboardButton("🥂 Kanavinsky district")
+        btn3 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1, btn2, btn3)
+        bot.send_message(message.from_user.id,
+                         "🥂 Unfortunately, there are no clubs in Sormovsky district, but you can hang out in any other district of Nizhny Novgorod from the list below.",
+                         reply_markup=markup)
+
+    elif message.text == "🥂 Moskovsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🥂 Nijegorodsky district")
+        btn2 = types.KeyboardButton("🥂 Kanavinsky district")
+        btn3 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1, btn2, btn3)
+        bot.send_message(message.from_user.id,
+                         "🥂 Unfortunately, there are no clubs in the Moskovsky district, but you can hang out in any other district of Nizhny Novgorod from the list below.",
+                         reply_markup=markup)
+
+    elif message.text == "🥂 Kanavinsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1)
+        bot.send_message(message.from_user.id,
+                         "In Kanavinsky district you can visit the following clubs:\n\n🥂 Sexofon Club: a club with excellent staff and a pleasant atmosphere. More detailed information can be found by clicking on [link](https://vk.com/sexofon_nn).",
+                         reply_markup=markup, parse_mode='Markdown', disable_web_page_preview=True)
+
+    elif message.text == "🥂 Leninsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🥂 Nijegorodsky district")
+        btn2 = types.KeyboardButton("🥂 Kanavinsky district")
+        btn3 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1, btn2, btn3)
+        bot.send_message(message.from_user.id,
+                         "🥂 Unfortunately, there are no clubs in Leninsky district, but you can hang out in any other district of Nizhny Novgorod from the list below.",
+                         reply_markup=markup)
+
+    elif message.text == "🥂 Autozavodsky district":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("🥂 Nijegorodsky district")
+        btn2 = types.KeyboardButton("🥂 Kanavinsky district")
+        btn3 = types.KeyboardButton("🔙 The main menu")
+        markup.add(btn1, btn2, btn3)
+        bot.send_message(message.from_user.id,
+                         "🥂 Unfortunately, there are no clubs in Avtozavodsky district, but you can hang out in any other district of Nizhny Novgorod from the list below.",
+                         reply_markup=markup)
+
 bot.polling(none_stop=True, interval=0)
