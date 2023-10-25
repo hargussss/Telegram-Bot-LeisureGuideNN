@@ -5,19 +5,13 @@ from telebot import types
 def start(message):
 
     markup=types.ReplyKeyboardMarkup(resize_keyboard=True)
-    btn1=types.KeyboardButton("👋 Поздороваться")
-    markup.add(btn1)
-    bot.send_message(message.from_user.id, "👋 Привет! Я твой бот-помощник, который подскажет тебе, куда можно сходить в Нижнем Новгороде. Даю рекомендации по интересным местам и заведениям.", reply_markup=markup)
+    btn1 = types.KeyboardButton("🇷🇺 Русский")
+    btn2 = types.KeyboardButton("🇬🇧 English")
+    markup.add(btn1, btn2)
+    bot.send_message(message.from_user.id, "🇷🇺 Выберите язык / 🇬🇧 Choose your language", reply_markup=markup)
 
 @bot.message_handler(content_types=['text'])
 def get_text_massages(message):
-
-    if message.text == "👋 Поздороваться":
-        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        btn1 = types.KeyboardButton("🇷🇺 Русский")
-        btn2 = types.KeyboardButton("🇬🇧 English")
-        markup.add(btn1, btn2)
-        bot.send_message(message.from_user.id, "🇷🇺 Выберите язык / 🇬🇧 Choose your language", reply_markup=markup)
 
     #Russian language
 
